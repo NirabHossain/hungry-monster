@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Hungry Monster</title>
+</head>
+<body>
+    <header class="container d-flex justify-content-between">
+        <div id="image">
+            <img src="logo.png" width="100px">
+        </div>
+        <div id="pq" class="d-flex align-items-center justify-content-between">
+            <p>Home</p>
+            <p>About</p>
+            <p>Recipes</p>
+            <p>Blog</p>
+        </div>
+    </header>    
+    <main>
+        <section class="container mt-5 d-flex form align-items-center justify-content-center">
+            <div class="d-flex">            
+                <input type="text" class="form-control" name="" id="formInput" placeholder="Search your meal">
+                <button onclick="displayMeal()" class="btn btn-success">Search</button>
+            </div>
+        </section>
+
+
+        <section id="displayMeal" class="mt-5"></section>
+        <section id="displaySingle" class="mt-5"></section>
+
+    </main>
+
+    <script src="mealFilter.js"></script>
+</body>
+
+<!-- Search meal by name
+www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata
+List all meals by first letter
+www.themealdb.com/api/json/v1/1/search.php?f=a
+Lookup full meal details by id
+www.themealdb.com/api/json/v1/1/lookup.php?i=52772
+Lookup a single random meal
+www.themealdb.com/api/json/v1/1/random.php
+Lookup a selection of 10 random meals (only available to $2+ Patreon supporters)
+www.themealdb.com/api/json/v1/1/randomselection.php
+List all meal categories
+www.themealdb.com/api/json/v1/1/categories.php
+Latest Meals (only available to $2+ Patreon supporters)
+www.themealdb.com/api/json/v1/1/latest.php
+List all Categories, Area, Ingredients
+www.themealdb.com/api/json/v1/1/list.php?c=list
+www.themealdb.com/api/json/v1/1/list.php?a=list
+www.themealdb.com/api/json/v1/1/list.php?i=list
+Filter by main ingredient
+www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast
+Filter by multi-ingredient (only available to $2+ Patreon supporters)
+www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast,garlic,salt
+Filter by Category
+www.themealdb.com/api/json/v1/1/filter.php?c=Seafood
+Filter by Area
+www.themealdb.com/api/json/v1/1/filter.php?a=Canadian -->
+
+
+</html>
