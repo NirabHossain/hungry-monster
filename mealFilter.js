@@ -7,17 +7,24 @@ function displayMeal(){
     .then(res=>res.json())
     .then(data=>{
         data.meals.forEach(meal => {
-            const name=meal.strMeal,img=meal.strMealThumb,id=meal.idMeal;
+            const name=meal.strMeal,img=meal[`strMealThumb`],id=meal.idMeal;
             const card=document.createElement('div');
+            const elements=document.createElement('ul');
+
             card.className="card p-2 m-2";
             card.innerHTML=`
                 <img src="${img}" class="card-img-top">
                 <div class="card-body">
                     <h5 class="card-title">${name}</h5>
-                    <h6>${id}</h6>
+                      <h6>${id}</h6>
                 </div>
             `;
             cards.append(card);
         });
     })
+    formText.value="";
 }
+
+document.getElementById('formInput').addEventListener('keypress',function(event){
+    if(event.keyCode===13)displayMeal();
+})
