@@ -11,6 +11,10 @@ header p{
     grid-template-columns: repeat(4,1fr);
     grid-gap: 5px;
 }
-.card h6{
+
+.card ul,.card h5{
     display: none;
+}
+#displaySingle{
+    margin:0 30% 10% 30%;
 }
